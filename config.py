@@ -13,6 +13,7 @@ import math
 #   'Pso'                : Particle Swarm Optimization
 #   'ModifiedPso'        : Modified PSO
 #   'GeneticAlgorithm'   : Genetic Algorithm
+#   'Ecca'               : Energy Efficient Collision Aware Multipath Routing
 # and aggregation_model may be:
 #   'zero'  : Zero cost
 #   'total' : 100% cost
@@ -141,6 +142,7 @@ BSID = -1
 # area definition
 AREA_WIDTH = 250.0
 AREA_LENGTH = 250.0
+AREA_DEPTH = 250.0
 # base station position
 BS_POS_X = 125.0
 BS_POS_Y = 125.0

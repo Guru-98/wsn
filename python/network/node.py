@@ -7,6 +7,7 @@ class Node(object):
   def __init__(self, id, parent = None):
     self.pos_x = np.random.uniform(0, cf.AREA_WIDTH)
     self.pos_y = np.random.uniform(0, cf.AREA_LENGTH)
+    self.pos_d = np.random.uniform(0, cf.AREA_DEPTH)
 
     if id == cf.BSID:
       self.energy_source = PluggedIn(self)

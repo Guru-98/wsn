@@ -8,6 +8,9 @@
 #include "optimizer.h"
 #include "individual.h"
 
+// Energy Efficient Collision Aware Multipath Routing
+// https://doi.org/10.1109/ICC.2009.5198989
+
 class Ecca: public Optimizer {
   public:
     Ecca(dict_t exclusive, regions_t overlapping,
