@@ -13,6 +13,7 @@ import math
 #   'Pso'                : Particle Swarm Optimization
 #   'ModifiedPso'        : Modified PSO
 #   'GeneticAlgorithm'   : Genetic Algorithm
+#   'Ecca'               : Energy Efficient Collision Aware Multipath Routing
 # and aggregation_model may be:
 #   'zero'  : Zero cost
 #   'total' : 100% cost
