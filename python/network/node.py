@@ -1,7 +1,8 @@
 import config as cf
 import numpy as np
-from python.network.energy_source import *
-from python.utils.utils import *
+import logging
+from python.network.energy_source import PluggedIn, Battery
+from python.utils.utils import calculate_distance
 
 class Node(object):
   def __init__(self, id, parent = None):

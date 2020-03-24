@@ -29,7 +29,7 @@ scenario0 = ('DC',    None,              'zero',  None)
 scenario1 = ('LEACH', None,              'zero',  None)
 scenario2 = ('MTE',   None,              'total', None)
 scenario3 = ('FCM',   None,              'zero',  None)
-scenario4 = ('FCM',  'ModifiedPso',      'zero',  'FCMMPSO')
+scenario4 = ('FCM',  'ModifiedPso',      'zero',  'LFE')
 scenario5 = ('FCM',  'Pso',              'zero',  None)
 scenario6 = ('FCM',  'Ecca',             'zero',  'ECCA')
 scenario7 = ('FCM',  'GeneticAlgorithm', 'zero',  None)
@@ -65,60 +65,14 @@ scenario34 = ('FCM',   None,              'zero',  'BS at (-65,-65)')
 scenarios = [
               "cf.FITNESS_ALPHA=0.7",
               "cf.FITNESS_BETA=0.3",
-#              scenario0,
-#              scenario1,
-#              scenario2,
-#              scenario3,
               scenario4,
-#              "cf.FITNESS_ALPHA=0.34",
-#              "cf.FITNESS_BETA=0.33",
-#              "cf.FITNESS_GAMMA=0.33",
               scenario6,
-#              scenario6,
-#              #'cf.BS_POS_X=65.0',
-#              #'cf.BS_POS_Y=65.0',
-#              #scenario32,
-#              #'cf.BS_POS_X=0.0',
-#              #'cf.BS_POS_Y=0.0',
-#              #scenario33,
-#              #'cf.BS_POS_X=-65.0',
-#              #'cf.BS_POS_Y=-65.0',
-#              #scenario34,
               "save2csv_raw(traces)",
               "plot_traces(traces)",
             ]
 
-#scenarios = [
-#              "cf.FITNESS_ALPHA=0.5",
-#              "cf.FITNESS_BETA=0.5",
-#              scenario4,
-#              scenario5,
-#              scenario6,
-#              "cf.FITNESS_ALPHA=0.75",
-#              "cf.FITNESS_BETA=0.25",
-#              scenario4,
-#              scenario5,
-#              scenario6,
-#              "cf.FITNESS_ALPHA=0.25",
-#              "cf.FITNESS_BETA=0.75",
-#              scenario4,
-#              scenario5,
-#              scenario6,
-#              "cf.FITNESS_ALPHA=1.0",
-#              "cf.FITNESS_BETA=0.0",
-#              scenario4,
-#              scenario5,
-#              scenario6,
-#              "cf.FITNESS_ALPHA=0.0",
-#              "cf.FITNESS_BETA=1.0",
-#              scenario4,
-#              scenario5,
-#              scenario6,
-#              "save2csv(traces)",
-#            ]
-
 ## tracer options
-TRACE_ENERGY         = 0
+TRACE_ENERGY         = 1
 TRACE_ALIVE_NODES    = 1
 TRACE_COVERAGE       = 1
 TRACE_LEARNING_CURVE = 0
@@ -133,19 +87,22 @@ NOTIFY_POSITION = 0
 
 ## Network configurations:
 # number of nodes
-NB_NODES = 300
+NB_NODES = 200
 # node sensor range
-COVERAGE_RADIUS = 15 # meters 
+COVERAGE_RADIUS = 75 # meters
+MIN_RADIUS = 10
+MAX_RADIUS = 20 
 # node transmission range
-TX_RANGE = 30 # meters
+TX_RANGE = 150 # meters
 BSID = -1
 # area definition
-AREA_WIDTH = 250.0
-AREA_LENGTH = 250.0
-AREA_DEPTH = 250.0
+AREA_WIDTH = 1000.0
+AREA_LENGTH = 1000.0
+AREA_DEPTH = 1000.0
 # base station position
-BS_POS_X = 125.0
-BS_POS_Y = 125.0
+BS_POS_X = 500.0
+BS_POS_Y = 500.0
+BS_POS_D = 0.0
 # packet configs
 MSG_LENGTH = 4000 # bits
 HEADER_LENGTH = 150 # bits

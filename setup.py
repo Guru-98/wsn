@@ -7,7 +7,7 @@ from distutils.core import setup, Extension
 import os
 
 # this project uses c++11 codes
-os.environ["CC"] = "g++-5 -std=c++11"
+os.environ["CC"] = "g++-7 -std=c++11"
 
 swig_opts   = ['-shadow', '-c++']
 source_path = 'cc/'
